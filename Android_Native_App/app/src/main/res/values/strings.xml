@@ -1,0 +1,286 @@
+<resources>
+    <string name="app_name">MHike Android</string>
+    <string name="app_name_display">MHike Android</string>
+
+    <string name="back">Back</string>
+    <string name="edit">Edit</string>
+    <string name="sign_out">Sign out</string>
+
+    <!-- CreateHike -->
+    <string name="new_hike">New hike</string>
+    <string name="edit_hike">Edit hike</string>
+    <string name="kicker_create">Step 1 of 2 · barely any typing</string>
+    <string name="kicker_edit">Editing</string>
+    <string name="sec_basics">THE BASICS</string>
+    <string name="sec_route">ROUTE</string>
+    <string name="sec_notes_extras">NOTES &amp; EXTRAS</string>
+
+    <string name="lbl_name">Hike name *</string>
+    <string name="lbl_location">Location *</string>
+    <string name="lbl_use_location">Use my location</string>
+    <string name="lbl_date">Date *</string>
+    <string name="lbl_start_time">Start time</string>
+    <string name="lbl_pick_one">— Pick one —</string>
+    <string name="lbl_distance">Distance (km) *</string>
+    <string name="lbl_duration">Duration (hours)</string>
+    <string name="lbl_difficulty">Difficulty *</string>
+    <string name="lbl_trail_type">Trail type</string>
+    <string name="lbl_parking">Parking available</string>
+    <string name="parking_yes">Yes</string>
+    <string name="parking_no">No</string>
+    <string name="lbl_weather">Expected weather</string>
+    <string name="lbl_description">Description</string>
+    <string name="lbl_kit_list">Kit list</string>
+    <string name="lbl_priority">Priority</string>
+
+    <string name="kit_map">Map &amp; compass</string>
+    <string name="kit_first_aid">First aid</string>
+    <string name="kit_torch">Torch</string>
+    <string name="kit_raincoat">Raincoat</string>
+    <string name="kit_water">Water</string>
+    <string name="kit_snacks">Snacks</string>
+
+    <string name="priority_must">Must do</string>
+    <string name="priority_soon">Soon</string>
+    <string name="priority_someday">Someday</string>
+
+
+    <string name="action_review">Review</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save_changes">Save changes</string>
+
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_moderate">Moderate</string>
+    <string name="difficulty_hard">Hard</string>
+
+    <!-- validation -->
+    <string name="err_required">Required</string>
+    <string name="err_pick_difficulty">Pick a difficulty</string>
+    <string name="err_pick_parking">Say whether there is parking</string>
+
+    <!-- Hike Detail Rows -->
+    <string name="row_location">Location</string>
+    <string name="row_datetime">Date</string>
+    <string name="row_distance">Distance · duration</string>
+    <string name="row_trail">Trail type</string>
+    <string name="row_parking">Parking</string>
+    <string name="row_weather">Weather</string>
+    <string name="row_description">Description</string>
+
+    <string name="saved_toast">Hike saved</string>
+    <string name="updated_toast">Hike updated</string>
+    <string name="action_discard">Discard this hike</string>
+
+    <!-- New Observation / Note -->
+    <string name="new_note">New note</string>
+    <string name="belongs_to_hike">Belongs to hike *</string>
+    <string name="title_obs">Title *</string>
+    <string name="hint_what_did_you_see">What did you see?</string>
+    <string name="lbl_when">When *</string>
+    <string name="lbl_detail">Detail</string>
+    <string name="sec_conditions_caps">CONDITIONS</string>
+    <string name="lbl_trail_condition">Trail condition</string>
+    <string name="cond_dry">Dry</string>
+    <string name="cond_muddy">Muddy</string>
+    <string name="cond_rocky">Rocky</string>
+    <string name="cond_icy">Icy</string>
+    <string name="lbl_wildlife">Wildlife</string>
+    <string name="wild_birds">Birds</string>
+    <string name="wild_deer">Deer</string>
+    <string name="wild_squirrels">Squirrels</string>
+    <string name="wild_cattle">Cattle</string>
+    <string name="wild_sheep">Sheep</string>
+    <string name="wild_insects">Insects</string>
+    <string name="lbl_vegetation">Vegetation</string>
+    <string name="veg_pine">Pine forest</string>
+    <string name="veg_reeds">Reeds</string>
+    <string name="veg_ferns">Ferns</string>
+    <string name="veg_wildflowers">Wildflowers</string>
+    <string name="veg_moss">Moss</string>
+    <string name="lbl_mood">Mood</string>
+    <string name="mood_stoked">Stoked</string>
+    <string name="mood_calm">Calm</string>
+    <string name="mood_beat">Beat</string>
+    <string name="lbl_rating">Rating (0–5)</string>
+    <string name="save_note">Save note</string>
+
+    <!-- Walking Plan / Training -->
+    <string name="walking_plan">Walking plan</string>
+    <string name="training_goal">TRAINING TOWARDS A GOAL</string>
+    <string name="your_bmi">YOUR BMI</string>
+    <string name="suggested_schedule">SUGGESTED SCHEDULE</string>
+    <string name="schedule_sub">Built automatically from your body profile.</string>
+    <string name="schedule_detail">3 sessions/week · starting 25 min · 12-week block</string>
+    <string name="schedule_growth">Every 2 weeks the sessions grow by 5 minutes, capped at 60.</string>
+    <string name="sessions_logged_fmt">%1$d/%2$d</string>
+    <string name="sessions_word">sessions logged</string>
+    <string name="week_fmt">WEEK %1$d</string>
+    <string name="schedule_detail_fmt">%1$d sessions/week · %2$d-week block</string>
+    <string name="bmi_eta_fmt">About %1$d weeks (~%2$d months) to reach a healthy range at a safe 0.5 kg/week.</string>
+    <string name="minutes_fmt">%1$d min</string>
+    <string name="no_plan_yet">No training plan yet.</string>
+
+    <string name="author">Le Gia Huy</string>
+    <!--
+      Web OAuth client of Firebase project mhike-legiahu (project number 404993946839).
+      Held here by hand because the checked-in app/google-services.json has no
+      oauth_client entries. If you ever re-download google-services.json and it does
+      contain a client_type 3 entry, DELETE this line: the google-services plugin
+      generates default_web_client_id itself and the two collide as a duplicate resource.
+    -->
+    <string name="default_web_client_id">404993946839-mnjsmdkul1po68dbgnai05u2oe91uq0n.apps.googleusercontent.com</string>
+
+    <!-- Confirm Screen Strings -->
+    <string name="confirm_title">Look good?</string>
+    <string name="confirm_sub">One glance, then it\'s in the book.</string>
+    <string name="action_save_hike">Save hike</string>
+    <string name="action_edit_details">Edit details</string>
+
+    <!-- bottom nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_hikes">Hikes</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Welcome back</string>
+    <string name="home_subtitle">Plan your next hike.</string>
+    <string name="no_hikes_hero">No hikes yet — go plan one.</string>
+    <string name="hike_plan">HIKE PLAN</string>
+    <string name="plan_progress_fmt">%1$d min hike · %2$d of %3$d logged</string>
+    <string name="plan_progress_done_fmt">All %2$d sessions logged</string>
+    <string name="plan_all_done">Plan complete</string>
+    <string name="start_session">Start session</string>
+    <string name="qa_new_hike">New hike</string>
+    <string name="qa_field_note">Field note</string>
+    <string name="qa_explore">Explore</string>
+    <string name="qa_plan">Plan</string>
+    <string name="qa_share">Share</string>
+    <string name="this_week">This week</string>
+    <string name="km_planned">km planned</string>
+    <string name="hikes_word">hikes</string>
+    <string name="recent_notes">Recent field notes</string>
+    <string name="no_notes">No field notes yet.</string>
+
+    <!-- Profile -->
+    <string name="user_name">Hugo Wishpax</string>
+    <string name="user_email">hugowishpax@gmail.com</string>
+    <string name="body_profile">BODY PROFILE</string>
+    <string name="bmi_obese">BMI 31.6 (obese)</string>
+    <string name="bmi_advice">About 22.8 kg above a healthy range for your height — ease in gradually and consider a chat with a health pro. Every step counts.</string>
+    <string name="bmi_instructions">Start with short, flat, easy hikes and build up gradually — check with a doctor first if it feels right.</string>
+    <string name="bmi_range">Healthy range: 63.3–85.2 kg · General guidance only — not a substitute for medical advice.</string>
+    <string name="options">OPTIONS</string>
+    <string name="opt_explore">Explore map</string>
+    <string name="opt_training">Training plan</string>
+    <string name="opt_all_notes">All field notes</string>
+    <string name="opt_settings">Settings</string>
+
+    <!-- Stats -->
+    <string name="completed_word">completed</string>
+    <string name="dist_6_months">DISTANCE OVER THE LAST 6 MONTHS</string>
+    <string name="by_difficulty_label">BY DIFFICULTY</string>
+
+    <string name="your_hikes">Your hikes</string>
+    <string name="hikes_count_fmt">%1$d logged · %2$d planned</string>
+    <string name="filter_all">All</string>
+    <string name="filter_planned">Planned</string>
+    <string name="filter_completed">Completed</string>
+    <string name="delete_all_hikes">Delete all hikes</string>
+    <string name="confirm_delete_all">Delete all hikes? This resets the database and cannot be undone.</string>
+    <string name="deleted_fmt">\"%1$s\" deleted</string>
+    <string name="undo">UNDO</string>
+    <string name="empty_hikes">No hikes yet. Tap + to add one.</string>
+    <string name="stat_km">km</string>
+    <string name="stat_km_fmt">%1$s km</string>
+    <string name="stat_duration">duration</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="confirm_delete_hike">Delete this hike?</string>
+    <string name="card_parking">Parking</string>
+    <string name="card_trail">Trail type</string>
+    <string name="observations_fmt">Field notes · %1$d</string>
+    <string name="add_note">Add note</string>
+    <string name="not_set">Not set</string>
+    <string name="edit_field_note">Edit field note</string>
+    <string name="on_hike_fmt">On: %1$s</string>
+    <string name="note_saved">Note saved</string>
+    <string name="note_updated">Note updated</string>
+    <string name="field_notes">Field notes</string>
+    <string name="notes_count_fmt">%1$d notes · %2$d hikes</string>
+    <string name="search_notes">Search notes, wildlife, places…</string>
+    <string name="cat_wildlife">Wildlife</string>
+    <string name="cat_vegetation">Vegetation</string>
+    <string name="cat_trail">Trail</string>
+    <string name="empty_notes">No field notes yet. Tap + to add one.</string>
+    <string name="pick_hike">Add note to which hike?</string>
+    <string name="no_hikes_first">Add a hike first.</string>
+    <string name="field_note_kicker_fmt">Field note · %1$s</string>
+    <string name="confirm_delete_note">Delete this field note?</string>
+    <string name="search">Search</string>
+    <string name="results_filtered_fmt">%1$d results</string>
+    <string name="no_match">No hikes match</string>
+    <string name="advanced_search">Advanced search</string>
+    <string name="adv_name">Name contains</string>
+    <string name="adv_location">Location contains</string>
+    <string name="adv_min_km">Min km</string>
+    <string name="adv_max_km">Max km</string>
+    <string name="adv_date_from">Date from</string>
+    <string name="adv_date_to">Date to</string>
+    <string name="apply">Apply</string>
+    <string name="reset">Reset</string>
+    <string name="tagline">Plan · Walk · Record</string>
+    <string name="settings">Settings</string>
+    <string name="appearance">Appearance</string>
+    <string name="theme">Theme</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_auto">Auto</string>
+    <string name="language">Language</string>
+    <string name="data">Data</string>
+    <string name="delete_all_data">Delete all data</string>
+    <string name="delete_all_data_sub">Removes every hike and note. Asks twice.</string>
+    <string name="confirm_delete_data_1">Delete all data? This removes every hike and field note.</string>
+    <string name="confirm_delete_data_2">Are you sure? This cannot be undone.</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="all_data_deleted">All data deleted</string>
+    <string name="share">Share</string>
+    <string name="share_hike_fmt">%1$s\n%2$s · %3$s · %4$s km\nPlanned with M-Hike.</string>
+    <string name="save_failed">Failed to save</string>
+    <string name="action_favourite">Favourite</string>
+    <string name="action_unfavourite">Remove favourite</string>
+    <string name="action_mark_completed">Mark as completed</string>
+    <string name="action_mark_planned">Mark as planned</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_planned">Planned</string>
+    <string name="lbl_mood_short">Mood</string>
+    <string name="lbl_rating_short">Rating</string>
+    <string name="rating_fmt">%1$d/5</string>
+    <string name="session_toggle_fmt">%1$s marked %2$s</string>
+    <string name="done">done</string>
+    <string name="not_done">not done</string>
+    <string name="filters_applied_fmt">Advanced: %1$d match(es)</string>
+    <string name="confirm_rebuild_plan">Rebuild the plan? Logged sessions will be reset.</string>
+    <string name="need_body_profile">Set your height and weight in Profile first.</string>
+    <string name="bmi_range_fmt">Healthy range: %1$.1f–%2$.1f kg</string>
+    <string name="bmi_on_track">You are already in a healthy range — keep it up.</string>
+    <string name="filter_favourites">Favourites</string>
+    <string name="sec_data">DATA</string>
+    <string name="search_by_name">By name</string>
+    <string name="search_advanced">Advanced</string>
+    <string name="km_planned_total_fmt">%1$s km planned in total</string>
+    <string name="completion_fmt">%1$d/%2$d</string>
+    <string name="geocoder_unavailable">Place lookup unavailable right now</string>
+    <string name="place_not_found">No place found</string>
+    <string name="action_edit_plan">Edit plan</string>
+    <string name="action_delete_plan">Delete plan</string>
+    <string name="confirm_delete_plan">Delete this walking plan and all logged sessions?</string>
+    <string name="plan_removed_hint">Plan deleted. Edit to create a new one.</string>
+    <string name="lbl_per_week">Sessions per week (1–7)</string>
+    <string name="lbl_weeks">Number of weeks (1–52)</string>
+    <string name="lbl_start_minutes">Starting minutes (5–60)</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="map_attribution" translatable="false">© OpenStreetMap contributors © CARTO</string>
+</resources>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mh_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="22dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="100dp">
+
+            <TextView
+                style="@style/Widget.MHike.Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nav_stats"
+                android:textSize="34sp" />
+            <TextView
+                android:id="@+id/txtStatSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 hikes · 0 notes"
+                android:textColor="@color/mh_text_muted"
+                android:textSize="17sp" />
+
+            <!-- Completion Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="24dp">
+                    <FrameLayout
+                        android:layout_width="140dp"
+                        android:layout_height="140dp">
+                        <ProgressBar
+                            android:id="@+id/progressCircle"
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:indeterminate="false"
+                            android:progress="0"
+                            android:max="100"
+                            android:progressDrawable="@drawable/mh_circular_progress"
+                            style="?android:attr/progressBarStyleHorizontal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/txtCompletionFraction"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0/0"
+                                android:textSize="32sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/mh_text" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/completed_word"
+                                android:textColor="@color/mh_text_muted"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/txtTotalKmPlanned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="0 km planned in total"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Distance Chart Card -->
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/dist_6_months" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:id="@+id/chartContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal"
+                    android:gravity="bottom"
+                    android:padding="16dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Difficulty Chart Card -->
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/by_difficulty_label" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal"
+                    android:gravity="bottom"
+                    android:padding="16dp">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="vertical">
+                        <TextView android:id="@+id/txtCountEasy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="11sp" />
+                        <View android:id="@+id/barEasy" android:layout_width="60dp" android:layout_height="0dp" android:background="@color/mh_diff_easy" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Easy" android:textSize="11sp" android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="vertical">
+                        <TextView android:id="@+id/txtCountModerate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="11sp" />
+                        <View android:id="@+id/barModerate" android:layout_width="60dp" android:layout_height="0dp" android:background="@color/mh_diff_moderate" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Moderate" android:textSize="11sp" android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="vertical">
+                        <TextView android:id="@+id/txtCountHard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="11sp" />
+                        <View android:id="@+id/barHard" android:layout_width="60dp" android:layout_height="0dp" android:background="@color/mh_diff_hard" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hard" android:textSize="11sp" android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/include_bottom_nav" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Foreground is the supplied logo raster (opaque white plate), so the background colour only
+     shows if a launcher mask reveals it — keep it the same white. No <monochrome>: a themed icon
+     needs an alpha silhouette, and flattening this artwork to one would just be a white blob. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground android:drawable="@mipmap/ic_launcher_foreground" />
+</adaptive-icon>

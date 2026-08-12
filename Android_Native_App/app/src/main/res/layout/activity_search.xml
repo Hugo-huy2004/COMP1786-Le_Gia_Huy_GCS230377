@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mh_bg">
+
+    <!-- Header: Title -->
+    <TextView
+        style="@style/Widget.MHike.Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="22dp"
+        android:paddingTop="20dp"
+        android:text="@string/search"
+        android:textSize="34sp" />
+
+    <!-- Search Mode Tabs -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MHike.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="@color/mh_fill2"
+        app:cardCornerRadius="8dp">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/searchTabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            app:tabIndicatorHeight="0dp"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabBackground="@drawable/mh_tab_background"
+            app:tabSelectedTextColor="@color/mh_text"
+            app:tabTextColor="@color/mh_text_muted"
+            app:tabTextAppearance="@style/TextAppearance.MH.Secondary"
+            app:tabMode="fixed">
+            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_by_name" />
+            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_advanced" />
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Search Input -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MHike.Card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp">
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:hint="Hike name starts with..."
+            android:textColorHint="@color/mh_text_muted"
+            android:textSize="17sp"
+            android:paddingHorizontal="12dp"
+            android:inputType="text" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Results Header -->
+    <TextView
+        android:id="@+id/txtResultHeader"
+        style="@style/Widget.MHike.SectionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="22dp"
+        android:layout_marginTop="24dp"
+        android:text="0 RESULTS" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="22dp"
+        android:paddingTop="12dp"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp" />
+
+    <include layout="@layout/include_bottom_nav" />
+</LinearLayout>

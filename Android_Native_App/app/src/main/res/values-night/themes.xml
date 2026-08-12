@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MHikeCWLeGiaHuy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/mh_accent</item>
+        <item name="colorPrimaryVariant">@color/mh_accent_strong</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/mh_accent</item>
+        <item name="colorSecondaryVariant">@color/mh_accent_strong</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/mh_bg</item>
+        <item name="colorSurface">@color/mh_surface</item>
+        <item name="colorOnSurface">@color/mh_text</item>
+        <item name="colorOnBackground">@color/mh_text</item>
+        <item name="android:textColorPrimary">@color/mh_text</item>
+        <item name="android:textColorSecondary">@color/mh_text_muted</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <!-- iOS 26 glass: transparent system bars -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
+    </style>
+</resources>

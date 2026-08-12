@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mh_bg">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp">
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_chevron_right"
+                android:rotation="180"
+                app:tint="@color/mh_accent"
+                android:contentDescription="@null" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                android:textColor="@color/mh_accent"
+                android:textSize="17sp"
+                android:layout_marginStart="2dp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/Widget.MHike.Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/new_hike"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtKicker"
+        style="@style/Widget.MHike.SectionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/kicker_create"
+        android:layout_marginBottom="12dp" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="22dp">
+
+            <!-- THE BASICS -->
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/sec_basics" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView style="@style/MHFieldLabel" android:text="@string/lbl_name" android:layout_marginTop="0dp" />
+                    <EditText
+                        android:id="@+id/edtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="textCapWords"
+                        android:paddingVertical="8dp"
+                        android:textSize="17sp"
+                        android:autofillHints="name" />
+
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginVertical="8dp" />
+
+                    <TextView style="@style/MHFieldLabel" android:text="@string/lbl_location" android:layout_marginTop="0dp" />
+                    <EditText
+                        android:id="@+id/edtLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="textCapWords"
+                        android:paddingVertical="8dp"
+                        android:textSize="17sp"
+                        android:autofillHints="postalAddress" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnUseLocation"
+                        style="@style/Widget.MHike.Button.Secondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/lbl_use_location"
+                        app:cornerRadius="12dp"
+                        android:textColor="@color/mh_text"
+                        app:backgroundTint="@color/mh_fill2" />
+
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginVertical="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView style="@style/MHFieldLabel" android:text="@string/lbl_date" android:layout_marginTop="0dp" />
+                            <LinearLayout android:id="@+id/rowDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:clickable="true" android:focusable="true">
+                                <TextView
+                                    android:id="@+id/edtDate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="5 Aug 2026"
+                                    android:textSize="17sp"
+                                    android:paddingVertical="8dp"
+                                    android:clickable="true"
+                                    android:focusable="true" />
+                                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_calendar" app:tint="@color/mh_text_muted" android:contentDescription="@null" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View android:layout_width="16dp" android:layout_height="1dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView style="@style/MHFieldLabel" android:text="@string/lbl_start_time" android:layout_marginTop="0dp" />
+                            <LinearLayout android:id="@+id/rowTime" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:clickable="true" android:focusable="true">
+                                <TextView
+                                    android:id="@+id/txtTime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/lbl_pick_one"
+                                    android:textColor="@color/mh_text_muted"
+                                    android:textSize="17sp"
+                                    android:paddingVertical="8dp" />
+                                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_clock" app:tint="@color/mh_text_muted" android:contentDescription="@null" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView style="@style/MHFieldLabel" android:text="@string/lbl_difficulty" android:layout_marginTop="16dp" />
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/toggleDifficulty"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        app:singleSelection="true"
+                        app:selectionRequired="true">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEasy"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/difficulty_easy"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnModerate"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/difficulty_moderate"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnHard"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/difficulty_hard"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+                    <TextView android:id="@+id/errDifficulty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/mh_deep_coral" android:textSize="12sp" android:visibility="gone" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ROUTE -->
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/sec_route" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView style="@style/MHFieldLabel" android:text="@string/lbl_distance" android:layout_marginTop="0dp" />
+                            <EditText android:id="@+id/edtDistance" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:inputType="numberDecimal" android:paddingVertical="8dp" android:textSize="17sp" android:autofillHints="none" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="16dp">
+                            <TextView style="@style/MHFieldLabel" android:text="@string/lbl_duration" android:layout_marginTop="0dp" />
+                            <EditText android:id="@+id/edtDuration" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:inputType="numberDecimal" android:paddingVertical="8dp" android:textSize="17sp" android:autofillHints="none" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginVertical="8dp" />
+
+                    <TextView style="@style/MHFieldLabel" android:text="@string/lbl_trail_type" android:layout_marginTop="0dp" />
+                    <EditText android:id="@+id/edtTrailType" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:paddingVertical="8dp" android:textSize="17sp" android:inputType="text" android:autofillHints="none" />
+
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginVertical="8dp" />
+
+                    <TextView style="@style/MHFieldLabel" android:text="@string/lbl_parking" android:layout_marginTop="0dp" />
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/toggleParking"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        app:singleSelection="true"
+                        app:selectionRequired="true">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnParkingYes"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/parking_yes"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnParkingNo"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/parking_no"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+                    <TextView android:id="@+id/errParking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/mh_deep_coral" android:textSize="12sp" android:visibility="gone" />
+
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginVertical="8dp" />
+
+                    <TextView style="@style/MHFieldLabel" android:text="@string/lbl_weather" android:layout_marginTop="0dp" />
+                    <EditText android:id="@+id/edtWeather" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:paddingVertical="8dp" android:textSize="17sp" android:inputType="text" android:autofillHints="none" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- NOTES & EXTRAS -->
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/sec_notes_extras" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView style="@style/MHFieldLabel" android:text="@string/lbl_kit_list" android:layout_marginTop="0dp" />
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/kitGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+                        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kit_map" />
+                        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kit_first_aid" />
+                        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kit_torch" />
+                        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kit_raincoat" />
+                        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kit_water" />
+                        <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kit_snacks" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginVertical="8dp" />
+
+                    <TextView style="@style/MHFieldLabel" android:text="@string/lbl_priority" android:layout_marginTop="0dp" />
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/togglePriority"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        app:singleSelection="true">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnMust"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/priority_must"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSoon"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/priority_soon"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSomeday"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/priority_someday"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginVertical="8dp" />
+
+                    <TextView style="@style/MHFieldLabel" android:text="@string/lbl_description" android:layout_marginTop="0dp" />
+                    <EditText android:id="@+id/edtDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@null" android:minLines="3" android:gravity="top" android:paddingVertical="8dp" android:textSize="17sp" android:inputType="textMultiLine" android:autofillHints="none" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Buttons -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReview"
+                style="@style/Widget.MHike.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/action_review"
+                app:cornerRadius="28dp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/Widget.MHike.Button.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/action_cancel"
+                android:textColor="@color/mh_text"
+                app:backgroundTint="@color/mh_fill2"
+                app:cornerRadius="28dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Cover header -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+            <ImageView
+                android:id="@+id/imgCover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="78dp"
+                android:src="@drawable/ic_mountain"
+                app:tint="@color/mh_deep_mint"
+                android:background="@color/mh_tint_mint"
+                android:contentDescription="@string/nav_hikes" />
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="14dp"
+                android:background="@drawable/mh_circle_accent"
+                android:src="@drawable/ic_chevron_right"
+                android:rotation="180"
+                app:tint="@color/mh_accent"
+                android:contentDescription="@string/back" />
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_margin="14dp"
+                android:padding="9dp"
+                android:background="@drawable/mh_circle_accent"
+                android:src="@drawable/ic_share"
+                app:tint="@color/mh_text"
+                android:contentDescription="@string/share" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="22dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="28dp">
+
+            <!-- Kicker + difficulty tag -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/txtKicker"
+                    style="@style/Widget.MHike.SectionLabel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tagDifficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mh_tag_accent"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/mh_accent_strong"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/Widget.MHike.Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textSize="32sp" />
+            <TextView
+                android:id="@+id/txtMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/mh_text_muted"
+                android:textSize="13.5sp" />
+
+            <!-- 2-stat strip: km + duration -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="15dp">
+                    <LinearLayout style="@style/MHStatCell">
+                        <TextView android:id="@+id/statKm" style="@style/MHStatNum" android:textSize="24sp" />
+                        <TextView style="@style/MHStatLabel" android:text="@string/stat_km" />
+                    </LinearLayout>
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="@color/mh_divider" />
+                    <LinearLayout style="@style/MHStatCell">
+                        <TextView android:id="@+id/statDuration" style="@style/MHStatNum" android:textSize="24sp" />
+                        <TextView style="@style/MHStatLabel" android:text="@string/stat_duration" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Action row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEdit"
+                    style="@style/Widget.MHike.Button.Primary"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="46dp"
+                    android:text="@string/action_edit" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDelete"
+                    style="@style/Widget.MHike.Button.Secondary"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/action_delete" />
+            </LinearLayout>
+
+            <!-- Weather card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/weatherCard"
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="14dp">
+                    <ImageView android:layout_width="26dp" android:layout_height="26dp"
+                        android:src="@drawable/ic_weather" app:tint="@color/mh_deep_sky"
+                        android:contentDescription="@string/lbl_weather" />
+                    <TextView
+                        android:id="@+id/txtWeather"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:textColor="@color/mh_text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Parking & trail type rows -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.MHike.Card"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/card_parking"
+                            android:textColor="@color/mh_text_muted"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:id="@+id/txtParking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/mh_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <Space android:layout_width="9dp" android:layout_height="1dp" />
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/Widget.MHike.Card"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/card_trail"
+                            android:textColor="@color/mh_text_muted"
+                            android:textSize="11sp" />
+                        <TextView
+                            android:id="@+id/txtTrailType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@color/mh_text"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- Description, kit list, priority - stored on the hike but had nowhere to show -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/detailCard"
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:id="@+id/detailRows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="4dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Observations -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:id="@+id/txtObsHeader"
+                    style="@style/Widget.MHike.SectionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"
+                    android:layout_marginHorizontal="12dp" android:background="@color/mh_divider" />
+                <TextView
+                    android:id="@+id/btnAddNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_note"
+                    android:textColor="@color/mh_accent_strong"
+                    android:textSize="11.5sp"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="4dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/obsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

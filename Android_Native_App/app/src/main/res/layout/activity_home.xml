@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mh_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="22dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="24dp">
+
+            <!-- Top Header: Date, Greeting, Profile -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentStart="true">
+                    <TextView
+                        android:id="@+id/txtDate"
+                        style="@style/Widget.MHike.SectionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="WEDNESDAY 5 AUGUST" />
+                    <TextView
+                        style="@style/Widget.MHike.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/home_greeting"
+                        android:textSize="38sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_subtitle"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="17sp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/profileInitials"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/mh_circle_amber"
+                    android:gravity="center"
+                    tools:text="HW"
+                    android:textColor="#FF9500"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <!-- Next hike + its recorded weather -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/nextHikeCard"
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/ic_weather"
+                        android:background="@drawable/mh_circle_sky"
+                        app:tint="@color/mh_accent"
+                        android:padding="8dp"
+                        android:contentDescription="Weather icon" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:id="@+id/txtNextHike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="Ben Nevis"
+                            android:textStyle="bold"
+                            android:textColor="@color/mh_text"
+                            android:textSize="15sp" />
+                        <TextView
+                            android:id="@+id/txtNextHikeMeta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="2026-08-20 · Fort William"
+                            android:textColor="@color/mh_text_muted"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hero Empty State -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/heroEmpty"
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="@string/no_hikes_hero"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/mh_text" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hike Plan Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/hikePlanCard"
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        style="@style/Widget.MHike.SectionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hike_plan" />
+                    <TextView
+                        android:id="@+id/txtPlanTitle"
+                        style="@style/Widget.MHike.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Ben Nevis"
+                        android:textSize="24sp"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        android:id="@+id/txtPlanMeta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="45 min hike · 28 of 36 logged"
+                        android:textColor="@color/mh_text_muted"
+                        android:layout_marginTop="2dp" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/planProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:progress="0"
+                        tools:progress="78"
+                        app:trackThickness="8dp"
+                        app:trackCornerRadius="4dp"
+                        app:indicatorColor="@color/mh_diff_moderate"
+                        app:trackColor="@color/mh_fill2" />
+
+                    <Button
+                        android:id="@+id/btnStartSession"
+                        style="@style/Widget.MHike.Button.Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:paddingHorizontal="32dp"
+                        android:text="@string/start_session"
+                        app:backgroundTint="@color/mh_deep_amber" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Action Buttons Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
+                <LinearLayout style="@style/MHQuickAction" android:id="@+id/qaNew">
+                    <ImageView style="@style/MHQuickIcon" android:src="@drawable/ic_plus"
+                        android:background="@drawable/mh_circle_mint" app:tint="@color/mh_deep_mint" />
+                    <TextView style="@style/MHQuickLabel" android:text="@string/qa_new_hike" />
+                </LinearLayout>
+                <LinearLayout style="@style/MHQuickAction" android:id="@+id/qaField">
+                    <ImageView style="@style/MHQuickIcon" android:src="@drawable/ic_pencil"
+                        android:background="@drawable/mh_circle_amber" app:tint="@color/mh_deep_amber" />
+                    <TextView style="@style/MHQuickLabel" android:text="@string/qa_field_note" />
+                </LinearLayout>
+                <LinearLayout style="@style/MHQuickAction" android:id="@+id/qaExplore">
+                    <ImageView style="@style/MHQuickIcon" android:src="@drawable/ic_mountain"
+                        android:background="@drawable/mh_circle_sky" app:tint="@color/mh_deep_sky" />
+                    <TextView style="@style/MHQuickLabel" android:text="@string/qa_explore" />
+                </LinearLayout>
+                <LinearLayout style="@style/MHQuickAction" android:id="@+id/qaPlan">
+                    <ImageView style="@style/MHQuickIcon" android:src="@drawable/ic_calendar"
+                        android:background="@drawable/mh_circle_coral" app:tint="@color/mh_deep_coral" />
+                    <TextView style="@style/MHQuickLabel" android:text="@string/qa_plan" />
+                </LinearLayout>
+                <LinearLayout style="@style/MHQuickAction" android:id="@+id/qaShare">
+                    <ImageView style="@style/MHQuickIcon" android:src="@drawable/ic_share"
+                        android:background="@drawable/mh_circle_accent" app:tint="@color/mh_deep_lavender" />
+                    <TextView style="@style/MHQuickLabel" android:text="@string/qa_share" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Stats section -->
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/this_week" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="20dp">
+                    <LinearLayout style="@style/MHStatCell">
+                        <TextView android:id="@+id/txtStatKm" style="@style/MHStatNum" android:text="0" />
+                        <TextView style="@style/MHStatLabel" android:text="@string/km_planned" />
+                    </LinearLayout>
+                    <View android:layout_width="1dp" android:layout_height="match_parent" android:background="@color/mh_divider" />
+                    <LinearLayout style="@style/MHStatCell">
+                        <TextView android:id="@+id/txtStatCount" style="@style/MHStatNum" android:text="0" />
+                        <TextView style="@style/MHStatLabel" android:text="@string/hikes_word" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Recent field notes -->
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/recent_notes" />
+            <LinearLayout
+                android:id="@+id/notesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/include_bottom_nav" />
+</LinearLayout>

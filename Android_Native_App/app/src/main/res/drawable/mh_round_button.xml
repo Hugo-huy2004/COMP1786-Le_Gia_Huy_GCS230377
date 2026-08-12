@@ -1,0 +1,18 @@
+<!-- iOS 26 glass circle — floating map buttons, FABs. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="0.5dp" android:color="@color/mh_glass_border" />
+            <solid android:color="@color/mh_glass_bg" />
+        </shape>
+    </item>
+    <item android:left="0.5dp" android:right="0.5dp" android:top="0.5dp">
+        <shape android:shape="oval">
+            <gradient
+                android:angle="270"
+                android:startColor="@color/mh_glass_specular"
+                android:endColor="#00FFFFFF"
+                android:centerY="0.05" />
+        </shape>
+    </item>
+</layer-list>

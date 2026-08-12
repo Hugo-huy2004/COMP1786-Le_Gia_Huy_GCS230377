@@ -1,0 +1,267 @@
+<resources>
+    <string name="app_name">MHike Android</string>
+    <string name="app_name_display">MHike Android</string>
+
+    <string name="back">Quay lại</string>
+    <string name="edit">Sửa</string>
+    <string name="sign_out">Đăng xuất</string>
+
+    <!-- CreateHike -->
+    <string name="new_hike">Hike mới</string>
+    <string name="edit_hike">Sửa Hike</string>
+    <string name="kicker_create">Bước 1/2 · điền nhanh</string>
+    <string name="kicker_edit">Đang sửa</string>
+    <string name="sec_basics">CƠ BẢN</string>
+    <string name="sec_route">LỘ TRÌNH</string>
+    <string name="sec_notes_extras">GHI CHÚ &amp; THÊM</string>
+
+    <string name="lbl_name">Tên Hike *</string>
+    <string name="lbl_location">Vị trí *</string>
+    <string name="lbl_use_location">Dùng vị trí của tôi</string>
+    <string name="lbl_date">Ngày *</string>
+    <string name="lbl_start_time">Giờ bắt đầu</string>
+    <string name="lbl_pick_one">— Chọn một —</string>
+    <string name="lbl_distance">Khoảng cách (km) *</string>
+    <string name="lbl_duration">Thời gian (giờ)</string>
+    <string name="lbl_difficulty">Độ khó *</string>
+    <string name="lbl_trail_type">Loại đường</string>
+    <string name="lbl_parking">Bãi đỗ xe</string>
+    <string name="parking_yes">Có</string>
+    <string name="parking_no">Không</string>
+    <string name="lbl_weather">Thời tiết dự kiến</string>
+    <string name="lbl_description">Mô tả</string>
+    <string name="lbl_kit_list">Danh sách đồ dùng</string>
+    <string name="lbl_priority">Ưu tiên</string>
+
+    <string name="kit_map">Bản đồ &amp; la bàn</string>
+    <string name="kit_first_aid">Sơ cứu</string>
+    <string name="kit_torch">Đèn pin</string>
+    <string name="kit_raincoat">Áo mưa</string>
+    <string name="kit_water">Nước</string>
+    <string name="kit_snacks">Đồ ăn nhẹ</string>
+
+    <string name="priority_must">Phải đi</string>
+    <string name="priority_soon">Sắp đi</string>
+    <string name="priority_someday">Khi nào đó</string>
+
+
+    <string name="action_review">Xem lại</string>
+    <string name="action_cancel">Hủy</string>
+    <string name="action_save_changes">Lưu thay đổi</string>
+
+    <string name="difficulty_easy">Dễ</string>
+    <string name="difficulty_moderate">Vừa</string>
+    <string name="difficulty_hard">Khó</string>
+
+    <!-- validation -->
+    <string name="err_required">Bắt buộc</string>
+    <string name="err_pick_difficulty">Chọn độ khó</string>
+    <string name="err_pick_parking">Chọn trạng thái bãi đỗ xe</string>
+
+    <!-- Hike Detail Rows -->
+    <string name="row_location">Vị trí</string>
+    <string name="row_datetime">Ngày giờ</string>
+    <string name="row_distance">Khoảng cách · thời gian</string>
+    <string name="row_trail">Loại đường</string>
+    <string name="row_parking">Bãi đỗ xe</string>
+    <string name="row_weather">Thời tiết</string>
+    <string name="row_description">Mô tả</string>
+
+    <string name="saved_toast">Đã lưu Hike</string>
+    <string name="updated_toast">Đã cập nhật Hike</string>
+    <string name="action_discard">Bỏ Hike này</string>
+
+    <!-- New Observation / Note -->
+    <string name="new_note">Ghi chú mới</string>
+    <string name="belongs_to_hike">Thuộc về Hike *</string>
+    <string name="title_obs">Tiêu đề *</string>
+    <string name="hint_what_did_you_see">Bạn đã thấy gì?</string>
+    <string name="lbl_when">Khi nào *</string>
+    <string name="lbl_detail">Chi tiết</string>
+    <string name="sec_conditions_caps">ĐIỀU KIỆN</string>
+    <string name="lbl_trail_condition">Tình trạng đường</string>
+    <string name="cond_dry">Khô</string>
+    <string name="cond_muddy">Bùn</string>
+    <string name="cond_rocky">Đá</string>
+    <string name="cond_icy">Băng</string>
+    <string name="lbl_wildlife">Động vật</string>
+    <string name="wild_birds">Chim</string>
+    <string name="wild_deer">Nai</string>
+    <string name="wild_squirrels">Sóc</string>
+    <string name="wild_cattle">Gia súc</string>
+    <string name="wild_sheep">Cừu</string>
+    <string name="wild_insects">Côn trùng</string>
+    <string name="lbl_vegetation">Thực vật</string>
+    <string name="veg_pine">Rừng thông</string>
+    <string name="veg_reeds">Sậy</string>
+    <string name="veg_ferns">Dương xỉ</string>
+    <string name="veg_wildflowers">Hoa dại</string>
+    <string name="veg_moss">Rêu</string>
+    <string name="lbl_mood">Tâm trạng</string>
+    <string name="mood_stoked">Hào hứng</string>
+    <string name="mood_calm">Bình tĩnh</string>
+    <string name="mood_beat">Mệt</string>
+    <string name="lbl_rating">Đánh giá (0–5)</string>
+    <string name="save_note">Lưu ghi chú</string>
+
+    <!-- Walking Plan / Training -->
+    <string name="walking_plan">Kế hoạch đi bộ</string>
+    <string name="training_goal">LUYỆN TẬP VÌ MỤC TIÊU</string>
+    <string name="your_bmi">BMI CỦA BẠN</string>
+    <string name="suggested_schedule">LỊCH TRÌNH ĐỀ XUẤT</string>
+    <string name="schedule_sub">Tự động tạo từ hồ sơ cơ thể bạn.</string>
+    <string name="schedule_detail">3 buổi/tuần · bắt đầu 25 phút · chu kỳ 12 tuần</string>
+    <string name="schedule_growth">Cứ mỗi 2 tuần, thời gian sẽ tăng thêm 5 phút, tối đa 60 phút.</string>
+    <string name="sessions_logged_fmt">%1$d/%2$d</string>
+    <string name="sessions_word">buổi đã đi</string>
+    <string name="week_fmt">TUẦN %1$d</string>
+    <string name="schedule_detail_fmt">%1$d buổi/tuần · chu kỳ %2$d tuần</string>
+    <string name="bmi_eta_fmt">Khoảng %1$d tuần (~%2$d tháng) để đạt cân nặng lý tưởng.</string>
+    <string name="minutes_fmt">%1$d phút</string>
+    <string name="no_plan_yet">Chưa có kế hoạch luyện tập.</string>
+
+    <string name="settings">Cài đặt</string>
+    <string name="appearance">Giao diện</string>
+    <string name="theme">Chủ đề</string>
+    <string name="theme_light">Sáng</string>
+    <string name="theme_dark">Tối</string>
+    <string name="theme_auto">Tự động</string>
+    <string name="language">Ngôn ngữ</string>
+
+    <!-- bottom nav -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_hikes">Hike</string>
+    <string name="nav_search">Tìm kiếm</string>
+    <string name="nav_stats">Thống kê</string>
+    <string name="nav_profile">Cá nhân</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Chào mừng trở lại</string>
+    <string name="home_subtitle">Lên kế hoạch cho chuyến đi tiếp theo.</string>
+    <string name="no_hikes_hero">Chưa có Hike nào — hãy lên kế hoạch ngay.</string>
+    <string name="hike_plan">KẾ HOẠCH HIKE</string>
+    <string name="start_session">Bắt đầu tập</string>
+    <string name="qa_new_hike">Hike mới</string>
+    <string name="qa_field_note">Ghi chú</string>
+    <string name="qa_explore">Khám phá</string>
+    <string name="qa_plan">Kế hoạch</string>
+    <string name="qa_share">Chia sẻ</string>
+    <string name="this_week">Tuần này</string>
+    <string name="km_planned">km kế hoạch</string>
+    <string name="hikes_word">hike</string>
+    <string name="recent_notes">Ghi chú gần đây</string>
+    <string name="no_notes">Chưa có ghi chú nào.</string>
+
+    <!-- Profile -->
+    <string name="user_name">Hugo Wishpax</string>
+    <string name="user_email">hugowishpax@gmail.com</string>
+    <string name="body_profile">HỒ SƠ CƠ THỂ</string>
+    <string name="bmi_obese">BMI 31.6 (béo phì)</string>
+    <string name="bmi_advice">Khoảng 22.8 kg trên mức cân nặng lý tưởng — hãy bắt đầu từ từ. Mỗi bước chân đều có giá trị.</string>
+    <string name="bmi_instructions">Bắt đầu bằng các chuyến đi ngắn, bằng phẳng, dễ dàng và tăng dần độ khó.</string>
+    <string name="bmi_range">Tầm lý tưởng: 63.3–85.2 kg · Chỉ là hướng dẫn chung — không thay thế lời khuyên y tế.</string>
+    <string name="options">TÙY CHỌN</string>
+    <string name="opt_explore">Bản đồ</string>
+    <string name="opt_training">Kế hoạch tập luyện</string>
+    <string name="opt_all_notes">Tất cả ghi chú</string>
+    <string name="opt_settings">Cài đặt</string>
+
+    <!-- Stats -->
+    <string name="completed_word">hoàn thành</string>
+    <string name="dist_6_months">KHOẢNG CÁCH TRONG 6 THÁNG QUA</string>
+    <string name="by_difficulty_label">THEO ĐỘ KHÓ</string>
+
+    <string name="your_hikes">Hike của bạn</string>
+    <string name="hikes_count_fmt">%1$d đã đi · %2$d kế hoạch</string>
+    <string name="filter_all">Tất cả</string>
+    <string name="filter_planned">Kế hoạch</string>
+    <string name="filter_completed">Hoàn thành</string>
+    <string name="delete_all_hikes">Xóa tất cả hike</string>
+    <string name="confirm_delete_all">Xóa toàn bộ dữ liệu? Hành động này không thể hoàn tác.</string>
+    <string name="deleted_fmt">Đã xóa \"%1$s\"</string>
+    <string name="undo">HOÀN TÁC</string>
+    <string name="empty_hikes">Chưa có Hike nào. Nhấn + để thêm.</string>
+    <string name="stat_km">km</string>
+    <string name="stat_km_fmt">%1$s km</string>
+    <string name="stat_duration">thời lượng</string>
+    <string name="action_edit">Sửa</string>
+    <string name="action_delete">Xóa</string>
+    <string name="confirm_delete_hike">Xóa Hike này?</string>
+    <string name="card_parking">Bãi đỗ xe</string>
+    <string name="card_trail">Loại đường</string>
+    <string name="observations_fmt">Ghi chú · %1$d</string>
+    <string name="add_note">Thêm ghi chú</string>
+    <string name="not_set">Chưa đặt</string>
+    <string name="edit_field_note">Sửa ghi chú</string>
+    <string name="on_hike_fmt">Tại: %1$s</string>
+    <string name="note_saved">Đã lưu ghi chú</string>
+    <string name="note_updated">Đã cập nhật ghi chú</string>
+    <string name="field_notes">Ghi chú thực địa</string>
+    <string name="notes_count_fmt">%1$d ghi chú · %2$d chuyến đi</string>
+    <string name="search_notes">Tìm kiếm ghi chú, động vật, nơi chốn...</string>
+    <string name="cat_wildlife">Động vật</string>
+    <string name="cat_vegetation">Thực vật</string>
+    <string name="cat_trail">Đường đi</string>
+    <string name="empty_notes">Chưa có ghi chú nào. Nhấn + để thêm.</string>
+    <string name="pick_hike">Thêm ghi chú cho Hike nào?</string>
+    <string name="no_hikes_first">Hãy thêm một Hike trước.</string>
+    <string name="field_note_kicker_fmt">Ghi chú · %1$s</string>
+    <string name="confirm_delete_note">Xóa ghi chú này?</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="results_filtered_fmt">%1$d kết quả</string>
+    <string name="no_match">Không có Hike nào khớp</string>
+    <string name="advanced_search">Tìm kiếm nâng cao</string>
+    <string name="adv_name">Tên chứa</string>
+    <string name="adv_location">Vị trí chứa</string>
+    <string name="adv_min_km">Khoảng cách tối thiểu</string>
+    <string name="adv_max_km">Khoảng cách tối đa</string>
+    <string name="adv_date_from">Từ ngày</string>
+    <string name="adv_date_to">Đến ngày</string>
+    <string name="apply">Áp dụng</string>
+    <string name="reset">Đặt lại</string>
+    <string name="tagline">Lên kế hoạch · Trải nghiệm · Ghi lại</string>
+    <string name="data">Dữ liệu</string>
+    <string name="delete_all_data">Xóa tất cả dữ liệu</string>
+    <string name="delete_all_data_sub">Xóa mọi Hike và ghi chú. Sẽ hỏi lại lần nữa.</string>
+    <string name="confirm_delete_data_1">Xóa sạch dữ liệu? Thao tác này sẽ xóa mọi Hike và ghi chú của bạn.</string>
+    <string name="confirm_delete_data_2">Bạn có chắc không? Thao tác này không thể hoàn tác.</string>
+    <string name="about">Thông tin</string>
+    <string name="version">Phiên bản</string>
+    <string name="all_data_deleted">Đã xóa toàn bộ dữ liệu</string>
+    <string name="share">Chia sẻ</string>
+    <string name="share_hike_fmt">%1$s\n%2$s · %3$s · %4$s km\nĐược lên kế hoạch bằng M-Hike.</string>
+    <string name="save_failed">Lưu thất bại</string>
+    <string name="action_favourite">Yêu thích</string>
+    <string name="action_unfavourite">Bỏ yêu thích</string>
+    <string name="action_mark_completed">Đánh dấu đã hoàn thành</string>
+    <string name="action_mark_planned">Đánh dấu là dự định</string>
+    <string name="status_completed">Đã hoàn thành</string>
+    <string name="status_planned">Dự định</string>
+    <string name="lbl_mood_short">Tâm trạng</string>
+    <string name="lbl_rating_short">Đánh giá</string>
+    <string name="rating_fmt">%1$d/5</string>
+    <string name="session_toggle_fmt">%1$s đã đánh dấu %2$s</string>
+    <string name="done">hoàn thành</string>
+    <string name="not_done">chưa xong</string>
+    <string name="filters_applied_fmt">Nâng cao: %1$d kết quả</string>
+    <string name="confirm_rebuild_plan">Tạo lại kế hoạch? Các buổi đã ghi sẽ bị đặt lại.</string>
+    <string name="need_body_profile">Hãy nhập chiều cao và cân nặng ở trang Cá nhân trước.</string>
+    <string name="bmi_range_fmt">Cân nặng lý tưởng: %1$.1f–%2$.1f kg</string>
+    <string name="bmi_on_track">Bạn đang ở mức cân nặng lý tưởng — cứ giữ vậy nhé.</string>
+    <string name="filter_favourites">Yêu thích</string>
+    <string name="sec_data">DỮ LIỆU</string>
+    <string name="search_by_name">Theo tên</string>
+    <string name="search_advanced">Nâng cao</string>
+    <string name="km_planned_total_fmt">Tổng %1$s km đã lên kế hoạch</string>
+    <string name="completion_fmt">%1$d/%2$d</string>
+    <string name="geocoder_unavailable">Không tra cứu được địa điểm lúc này</string>
+    <string name="place_not_found">Không tìm thấy địa điểm</string>
+    <string name="action_edit_plan">Sửa kế hoạch</string>
+    <string name="action_delete_plan">Xóa kế hoạch</string>
+    <string name="confirm_delete_plan">Xóa kế hoạch đi bộ này và toàn bộ buổi đã ghi?</string>
+    <string name="plan_removed_hint">Đã xóa kế hoạch. Bấm Sửa để tạo lại.</string>
+    <string name="lbl_per_week">Số buổi mỗi tuần (1–7)</string>
+    <string name="lbl_weeks">Số tuần (1–52)</string>
+    <string name="lbl_start_minutes">Số phút ban đầu (5–60)</string>
+    <string name="permission_denied">Đã từ chối quyền</string>
+</resources>

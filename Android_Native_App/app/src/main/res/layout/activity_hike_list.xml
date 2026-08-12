@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mh_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header: Title + Count -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="22dp"
+            android:paddingTop="20dp">
+            <TextView
+                style="@style/Widget.MHike.Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_hikes"
+                android:textSize="34sp" />
+            <TextView
+                android:id="@+id/txtCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 logged · 1 planned"
+                android:textColor="@color/mh_text_muted"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.MHike.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/mh_text_muted" />
+                <EditText
+                    android:id="@+id/edtSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="Search hikes by name"
+                    android:textColorHint="@color/mh_text_muted"
+                    android:textSize="17sp"
+                    android:layout_marginStart="8dp"
+                    android:inputType="text" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Filter Tabs -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.MHike.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/mh_fill2"
+            app:cardCornerRadius="8dp">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                app:tabIndicatorHeight="0dp"
+                app:tabRippleColor="@android:color/transparent"
+                app:tabBackground="@drawable/mh_tab_background"
+                app:tabSelectedTextColor="@color/mh_text"
+                app:tabTextColor="@color/mh_text_muted"
+                app:tabTextAppearance="@style/TextAppearance.MH.Secondary"
+                app:tabMode="fixed">
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/filter_all" />
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/filter_planned" />
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/filter_completed" />
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/filter_favourites" />
+            </com.google.android.material.tabs.TabLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="22dp"
+                    android:paddingTop="12dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- Data section -->
+                <TextView
+                    style="@style/Widget.MHike.SectionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="22dp"
+                    android:text="@string/sec_data" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnDeleteAll"
+                    style="@style/Widget.MHike.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="22dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="100dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="@string/delete_all_hikes"
+                        android:textColor="@color/mh_deep_coral"
+                        android:textSize="17sp" />
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include layout="@layout/include_bottom_nav" />
+    </LinearLayout>
+
+    <!-- FAB -->
+    <ImageView
+        android:id="@+id/fab"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:padding="20dp"
+        android:src="@drawable/ic_plus"
+        app:tint="@color/mh_deep_mint"
+        android:background="@drawable/mh_circle_mint"
+        android:elevation="6dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

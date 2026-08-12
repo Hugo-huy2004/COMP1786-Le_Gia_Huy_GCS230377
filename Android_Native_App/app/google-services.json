@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "404993946839",
+    "firebase_url": "https://mhike-legiahu-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "mhike-legiahu",
+    "storage_bucket": "mhike-legiahu.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404993946839:android:fae88dd4d87732c7ec2c92",
+        "android_client_info": {
+          "package_name": "com.example.mhike_cw_legiahuy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx-z-8YSiZOGmlT-QT6Re5wZoUSW6g2tQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

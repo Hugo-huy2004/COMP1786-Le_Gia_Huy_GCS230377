@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- M-Hike v3 — Health + Maps look: grouped inset lists, neutral surfaces, semantic category colours. -->
+    <!-- Surfaces (grouped background pattern) -->
+    <color name="mh_bg">#F2F2F7</color>          <!-- grouped page background -->
+    <color name="mh_surface">#FFFFFF</color>      <!-- cards / cells -->
+    <color name="mh_fill2">#EFEFF4</color>        <!-- second-level fill / segmented track -->
+    <color name="mh_divider">#C6C6C8</color>      <!-- hairline separator -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Labels -->
+    <color name="mh_text">#000000</color>         <!-- primary label -->
+    <color name="mh_text_muted">#8A8A8E</color>   <!-- secondary label -->
+    <color name="mh_chevron">#C7C7CC</color>
+
+    <!-- Accent = system blue -->
+    <color name="mh_accent">#007AFF</color>
+    <color name="mh_accent_strong">#007AFF</color>
+    <color name="mh_accent_tint">#E6F0FF</color>
+
+    <!-- Semantic category colours (Health vitals palette) -->
+    <color name="mh_cat_hikes">#34C759</color>    <!-- green -->
+    <color name="mh_cat_obs">#FF9500</color>      <!-- orange -->
+    <color name="mh_diff_moderate">#FF9500</color>
+    <color name="mh_diff_hard">#FF3B30</color>
+
+    <!-- Legacy family names re-valued to v3 semantics (deep = icon/value colour, tint = icon-tile fill) -->
+    <color name="mh_deep_mint">#34C759</color>       <color name="mh_tint_mint">#E7F9EC</color>
+    <color name="mh_deep_amber">#FF9500</color>      <color name="mh_tint_amber">#FFF4E5</color>
+    <color name="mh_deep_coral">#FF3B30</color>      <color name="mh_tint_coral">#FFECEA</color>
+    <color name="mh_deep_sky">#007AFF</color>        <color name="mh_tint_sky">#E6F0FF</color>
+    <color name="mh_deep_lavender">#AF52DE</color>   <color name="mh_tint_lavender">#F5EAFB</color>
+    <color name="mh_deep_pink">#FF375F</color>       <color name="mh_tint_pink">#FFEAEF</color>
+    <color name="mh_deep_butter">#FFCC00</color>
+    <!-- iOS 26 Liquid Glass — light surfaces -->
+    <color name="mh_glass_bg">#B8FFFFFF</color>          <!-- translucent frosted surface ~72% white -->
+    <color name="mh_glass_scrim">#33000000</color>        <!-- light scrim behind sheets -->
+    <color name="mh_glass_border">#4DFFFFFF</color>       <!-- hairline edge of the glass capsule -->
+    <color name="mh_glass_specular">#80FFFFFF</color>     <!-- bright top highlight line -->
+    <color name="mh_cat_stats">#FF375F</color>          <!-- stats/analytics accent -->
+    <color name="mh_diff_easy">#34C759</color>          <!-- difficulty: Easy -->
+</resources>

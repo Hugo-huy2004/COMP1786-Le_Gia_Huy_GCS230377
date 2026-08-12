@@ -1,0 +1,5 @@
+<!-- Rounded category icon-tile. Tinted per category via backgroundTint. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="7dp" />
+    <solid android:color="@color/mh_fill2" />
+</shape>

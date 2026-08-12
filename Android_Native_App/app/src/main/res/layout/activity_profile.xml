@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mh_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="22dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="100dp">
+
+            <!-- Profile Header -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/profileInitials"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/mh_circle_amber"
+                    android:gravity="center"
+                    android:text="HW"
+                    android:textColor="#FF9500"
+                    android:textStyle="bold"
+                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/profileInitials"
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        style="@style/Widget.MHike.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtUserName"
+                        tools:text="@string/user_name"
+                        android:textSize="24sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtUserEmail"
+                        tools:text="@string/user_email"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="17sp" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/edit"
+                    android:textColor="@color/mh_accent"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <!-- Summary Cards Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
+                <include android:id="@+id/statHikes" layout="@layout/include_profile_stat" />
+                <include android:id="@+id/statKm" layout="@layout/include_profile_stat" />
+                <include android:id="@+id/statNotes" layout="@layout/include_profile_stat" />
+                <include android:id="@+id/statBmi" layout="@layout/include_profile_stat" />
+            </LinearLayout>
+
+            <!-- Body Profile -->
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/body_profile" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txtBodyStats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="185 cm · 108 kg · 22 yr"
+                            android:textStyle="bold"
+                            android:textColor="@color/mh_text"
+                            android:textSize="19sp" />
+                        <ImageView
+                            android:id="@+id/btnEditBody"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_pencil"
+                            app:tint="@color/mh_accent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:contentDescription="Edit stats" />
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/txtBmiLine"
+                        tools:text="@string/bmi_obese"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/txtBmiAdvice"
+                        tools:text="@string/bmi_advice"
+                        android:textColor="@color/mh_deep_coral"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/bmi_instructions"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:id="@+id/txtBmiRange"
+                        tools:text="@string/bmi_range"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Options -->
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/options" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include android:id="@+id/optExplore" layout="@layout/include_profile_option" />
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginHorizontal="60dp" />
+                    <include android:id="@+id/optTraining" layout="@layout/include_profile_option" />
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginHorizontal="60dp" />
+                    <include android:id="@+id/optNotes" layout="@layout/include_profile_option" />
+                    <View style="@style/Widget.MHike.Divider" android:layout_marginHorizontal="60dp" />
+                    <include android:id="@+id/optSettings" layout="@layout/include_profile_option" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignOut"
+                style="@style/Widget.MHike.Button.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/sign_out"
+                android:textColor="@color/mh_text"
+                app:backgroundTint="@color/mh_fill2"
+                app:cornerRadius="28dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/include_bottom_nav" />
+</LinearLayout>

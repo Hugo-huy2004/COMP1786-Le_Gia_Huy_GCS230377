@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Surfaces (dark mode) -->
+    <color name="mh_bg">#000000</color>
+    <color name="mh_surface">#1C1C1E</color>
+    <color name="mh_fill2">#2C2C2E</color>
+    <color name="mh_divider">#38383A</color>
+
+    <!-- Labels -->
+    <color name="mh_text">#FFFFFF</color>
+    <color name="mh_text_muted">#8E8E93</color>
+    <color name="mh_chevron">#48484A</color>
+
+    <!-- Semantic category tints (dark mode) -->
+    <color name="mh_tint_mint">#1C3322</color>
+    <color name="mh_tint_amber">#33221C</color>
+    <color name="mh_tint_coral">#331C1C</color>
+    <color name="mh_tint_sky">#1C2233</color>
+    <color name="mh_tint_lavender">#221C33</color>
+    <color name="mh_tint_pink">#331C22</color>
+    <color name="mh_accent_tint">#1C2233</color>
+
+    <!-- Translucent glass (dark mode) -->
+    <color name="mh_glass_bg">#CC1C1C1E</color>
+    <color name="mh_glass_border">#33FFFFFF</color>
+
+    <!-- Semantic overrides -->
+    <color name="black">#FFFFFF</color>
+</resources>

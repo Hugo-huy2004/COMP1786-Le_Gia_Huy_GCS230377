@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tabIndicator" type="id" />
+    <item name="btnEditBody" type="id" />
+    <item name="txtBodyStats" type="id" />
+    <item name="btnGoogleSignIn" type="id" />
+    <item name="chipTime" type="id" />
+</resources>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mh_bg">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp">
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_chevron_right"
+                android:rotation="180"
+                app:tint="@color/mh_accent"
+                android:contentDescription="@null" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"
+                android:textColor="@color/mh_accent"
+                android:textSize="17sp"
+                android:layout_marginStart="2dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="22dp">
+
+            <TextView
+                style="@style/Widget.MHike.Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/walking_plan"
+                android:textSize="34sp" />
+            <TextView
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/training_goal"
+                android:layout_marginTop="4dp" />
+
+            <!-- YOUR BMI Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        style="@style/Widget.MHike.SectionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/your_bmi" />
+                    <TextView
+                        android:id="@+id/txtBmiValue"
+                        style="@style/Widget.MHike.Heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="31.6"
+                        android:textSize="32sp"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        android:id="@+id/txtBmiCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Obese"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="17sp" />
+                    <TextView
+                        android:id="@+id/txtBmiRange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Healthy range: 63.3–85.2 kg"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        android:id="@+id/txtBmiTarget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="About 46 weeks to reach a healthy range."
+                        android:textColor="@color/mh_deep_amber"
+                        android:textSize="15sp"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- SUGGESTED SCHEDULE Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView
+                        style="@style/Widget.MHike.SectionLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/suggested_schedule" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/schedule_sub"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/txtScheduleDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/schedule_detail"
+                        android:textColor="@color/mh_text"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginTop="12dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/schedule_growth"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtLoggedSessions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28/36"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/mh_text"
+                        android:layout_marginTop="16dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sessions_word"
+                        android:textColor="@color/mh_text_muted"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/planActions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEditPlan"
+                            style="@style/Widget.MHike.Button.Secondary"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="46dp"
+                            android:text="@string/action_edit_plan"
+                            android:textColor="@color/mh_text"
+                            app:backgroundTint="@color/mh_fill2"
+                            app:cornerRadius="23dp" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnDeletePlan"
+                            style="@style/Widget.MHike.Button.Secondary"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="46dp"
+                            android:layout_marginStart="10dp"
+                            android:text="@string/action_delete_plan"
+                            android:textColor="@color/mh_deep_coral"
+                            app:backgroundTint="@color/mh_fill2"
+                            app:cornerRadius="23dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- WEEK list -->
+            <TextView
+                android:id="@+id/txtWeekLabel"
+                style="@style/Widget.MHike.SectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                tools:text="WEEK 1" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MHike.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:id="@+id/week1Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp"
+                    android:orientation="vertical" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
